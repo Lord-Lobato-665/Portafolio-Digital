@@ -1,0 +1,43 @@
+.navbar-contain {
+    background-color: rgba(2, 48, 71, 0.7); /* Color de fondo con opacidad */
+    width: 250px; /* Establece el ancho */
+    height: 100vh; /* Usa 100% del alto de la ventana visible */
+    border-right: white solid 2px;
+}
+
+.navbar-elements {
+    display: flex; /* Utilizamos flexbox para organizar los elementos */
+    flex-direction: column; /* Organizamos los elementos en una columna */
+}
+
+.navbar-elements a {
+    text-decoration: none; /* Eliminamos el subrayado de los enlaces */
+    margin-top: 50px; /* Espacio entre cada enlace */
+    margin-left: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: left; /* Justifica el texto a la izquierda */
+    width: 230px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.navbar-elements a:hover {
+    transform: translateX(30px);
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    width: 230px;
+    height: 40px;
+}
+
+.display {
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 50x;
+}

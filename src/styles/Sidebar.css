@@ -1,0 +1,1360 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #023047;
+    --white: #ffffff;
+    --gray: #e7e7e7;
+    --black1: #222;
+    --black2: #999;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/* =============== Modal ===================== */
+
+.modal {
+    display: block; /* Para hacer visible el modal */
+    position: fixed; /* Para fijar el modal en la ventana del navegador */
+    z-index: 10002; /* Asegura que el modal esté en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* O el ancho deseado */
+    height: 100%; /* O la altura deseada */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  }
+  
+  .modal-content {
+    position: absolute; /* Para posicionar el contenido del modal */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el contenido del modal */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
+  }  
+
+/* =============== Icons ===================== */
+
+.icon-container {
+    text-align: center;
+    width: 100px;
+    height: 75px;
+    /* border: white dotted; */
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 16%;
+    margin-top: 20px;
+    /* border: white dotted; */
+}
+
+.icons-container-2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 90%;
+    margin-top: 20px;
+    /* border: white dotted; */
+}
+
+/* ICON CSS */
+
+.icon-size-css {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-css {
+    display: none;
+    position: absolute;
+    top: -32px;
+    left: 26%;
+    transform: translateX(-10%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.icon-size-css:hover .tooltip-css {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-css:hover {
+    color: #264ce4; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ICON DB */
+
+.icon-size-db {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-db {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 11px;
+    width: 100px;
+    height: 40px;
+    padding: 8% 8%;
+    border-radius: 5px;
+}
+
+.icon-size-db:hover .tooltip-db {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-db:hover {
+    color: #1b469c; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ICON HONEY */
+
+.icon-size-honey {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-honey {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    transform: translateX(-10%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 11px;
+    width: 100px;
+    height: 40px;
+    padding: 8% 10%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.icon-size-honey:hover .tooltip-honey {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-honey:hover {
+    color: #e4cb26; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ICON TOOL */
+
+.icon-size-tool {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-tool {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    transform: translateX(-10%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 11px;
+    width: 110px;
+    height: 40px;
+    padding: 8% 10%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.icon-size-tool:hover .tooltip-tool {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-tool:hover {
+    color: #e30000; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ICON BRAIN */
+
+.icon-size-brain {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-brain {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: -10px;
+    transform: translateX(-10%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 11px;
+    width: 120px;
+    height: 40px;
+    padding: 6px 10%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.icon-size-brain:hover .tooltip-brain {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-brain:hover {
+    color: #e42672; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ICON SHIELD */
+
+.icon-size-shield {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-shield {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    transform: translateX(-10%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 11px;
+    width: 100px;
+    height: 40px;
+    padding: 8% 8%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.icon-size-shield:hover .tooltip-shield {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-shield:hover {
+    color: #3cd328; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ICON MEDAL */
+
+.icon-size-medal {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-medal {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    transform: translateX(-10%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 11px;
+    width: 100px;
+    height: 30px;
+    padding: 8% 8%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.icon-size-medal:hover .tooltip-medal {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-medal:hover {
+    color: #d89700; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ICON SWORD */
+
+.icon-size-sword {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-sword {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    transform: translateX(-10%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 11px;
+    width: 100px;
+    height: 30px;
+    padding: 8% 8%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.icon-size-sword:hover .tooltip-sword {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-sword:hover {
+    color: #63fff5; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ICON CARISM */
+
+.icon-size-carism {
+    font-size: 80px;
+    color: gray;
+    position: relative; /* Establece el contexto de posición para el tooltip */
+    transition: color 0.3s, transform 0.3s; /* Transiciones para color y transformación */
+}
+
+.tooltip-carism {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    transform: translateX(-10%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 11px;
+    width: 100px;
+    height: 30px;
+    padding: 8% 8%;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.icon-size-carism:hover .tooltip-carism {
+    display: block; /* Muestra el tooltip cuando se hace hover sobre el icono */
+}
+
+.icon-size-carism:hover {
+    color: #de3b56; /* Cambiar el color del texto */
+    transform: translateY(-10px) scale(1.2);
+}
+
+/* ANIMATION TOOLTIP ENTRANCE*/
+
+.scale-in-ver-bottom {
+	-webkit-animation: scale-in-ver-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-ver-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+  }
+
+/* =============== Navigation ================ */
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active {
+    width: 30px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--blue);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .react-icon {
+    font-size: 1.5rem;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/* ===================== Main ===================== */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.h-flex {
+    display: inline-flex;
+}
+
+.color-text {
+    color: white;
+}
+
+.tag-left {
+    color: grey;
+}
+
+.tag-right {
+    color: grey;
+}
+
+.tag-slash {
+    color: grey;
+}
+
+.tag-center {
+    color: rgb(51, 126, 230);
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #023047;
+    color: white;
+}
+
+.title-page {
+    font-size: large;
+}
+
+.toggle {
+    position: absolute;
+    color: #fff;
+    background-color: #0230479b;
+    border-radius: 20%;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    top: 4px;
+    transition: background-color 0.2s;
+}
+
+.toggle:active {
+    background-color: #ffffff1a;
+}
+
+.toggle.rotate {
+    animation: rotateAnimation 0.3s linear forwards;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+
+.search label .react-icon {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+.profile-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    /* border: white dotted; */
+}
+
+.image-container {
+    text-align: center;
+    width: 275px;
+    height: 140px;
+    /* border: white dotted; */
+}
+
+/* ======================= Cards ====================== */
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.cardBox .card {
+    position: relative;
+    background: var(--gray);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.cardBox .card .cardName {
+    color: var(--black2);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+    font-size: 3.5rem;
+    color: var(--black2);
+}
+
+.cardBox .card:hover {
+    background: var(--blue);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+    color: var(--blue);
+}
+
+/* ================== Order Details List ============== */
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+}
+
+.details .recentOrders {
+    position: relative;
+    min-height: 500px;
+    padding: 20px;
+    border-right: grey solid 1px;
+    border-top: grey solid 1px;
+    border-bottom: grey solid 1px;
+    border-radius: 20px;
+    background-color: #313131;
+}
+
+.recentOrders-2 {
+    position: relative;
+    display: grid;
+    min-height: 300px;
+    padding: 20px;
+    border-top: grey solid 1px;
+    border-bottom: grey solid 1px;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: #313131;
+}
+
+.details .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.cardHeader .btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 600;
+}
+
+.details .recentOrders table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .recentOrders table tr:last-child {
+    border-bottom: none;
+}
+
+.details .recentOrders table tbody tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.details .recentOrders table tr td {
+    padding: 10px;
+}
+
+.details .recentOrders table tr td:last-child {
+    text-align: end;
+}
+
+.details .recentOrders table tr td:nth-child(2) {
+    text-align: end;
+}
+
+.details .recentOrders table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status.delivered {
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.pending {
+    padding: 2px 4px;
+    background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.return {
+    padding: 2px 4px;
+    background: #f00;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.inProgress {
+    padding: 2px 4px;
+    background: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.recentCustomers {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    border-left: grey solid 1px;
+    border-top: grey solid 1px;
+    border-bottom: grey solid 1px;
+    border-radius: 20px;
+    border-radius: 20px;
+    background-color: #313131;
+}
+
+.recentCustomers .imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.recentCustomers .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recentCustomers table tr td {
+    padding: 12px 10px;
+}
+
+.recentCustomers table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2rem;
+}
+
+.recentCustomers table tr td h4 span {
+    font-size: 14px;
+    color: var(--black2);
+}
+
+.recentCustomers table tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.recentCustomers table tr:hover td h4 span {
+    color: var(--white);
+}
+
+/* ====================== Responsive Design ========================== */
+
+@media (max-width: 1500px) {
+    .navigation {
+        left: -300px;
+    }
+
+    .navigation.active {
+        width: 300px;
+        left: 0;
+    }
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+
+    .main.active {
+        left: 300px;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navigation ul li a {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .toggle {
+        z-index: 10001;
+    }
+}
+
+@media (max-width: 1300px) {
+    .navigation {
+        left: -300px;
+    }
+
+    .navigation.active {
+        width: 300px;
+        left: 0;
+    }
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+
+    .main.active {
+        left: 300px;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navigation ul li a {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .toggle {
+        z-index: 10001;
+    }
+
+    .main.active .toggle {
+        color: #fff;
+        position: fixed;
+        left: 200;
+    }
+}
+
+@media (max-width: 991px) {
+    .navigation {
+        left: -300px;
+    }
+
+    .navigation.active {
+        width: 300px;
+        left: 0;
+    }
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+
+    .main.active {
+        left: 332px;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navigation ul li a {
+        font-size: 20px;
+        margin-top: 60px;
+    }
+
+    .navigation {
+        max-height: 100%;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+
+    .toggle {
+        z-index: 10001;
+        transition: 0.5s;
+    }
+
+    .main.active .toggle {
+        color: #fff;
+        position: fixed;
+    }
+}
+
+@media (max-width: 900px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardHeader h2 {
+        font-size: 20px;
+    }
+
+    .user {
+        min-width: 40px;
+    }
+
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        width: 40%;
+        left: 0;
+    }
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+
+    .toggle {
+        z-index: 10001;
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        left: 4px;
+        font-size: 1.5rem;
+        transition: 0.5s;
+    }
+
+    .main.active .toggle {
+        color: #fff;
+        position: fixed;
+        left: 290px;
+    }
+
+    .navigation ul li a {
+        font-size: 20px;
+    }
+
+    .navigation ul li a .icon .react-icon {
+        font-size: 1.8rem;
+    }
+
+    .navigation ul li a .icon {
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 75px;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+    
+    .image-container {
+        text-align: center;
+        width: 320px;
+        height: 115px;
+        /* border: white dotted; */
+    }
+
+    .icons-container {
+        transform: scale(0.8);
+        display: inline-flex;
+        width: 100%;
+        height: 10%;
+        /* border: white dotted; */
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+    .recentOrders {
+        overflow-x: auto;
+    }
+
+    .status.inProgress {
+        white-space: nowrap;
+    }
+
+    .navigation ul li a{
+        font-size: 24px;
+    }
+    
+    .navigation ul li a .icon .react-icon {
+        font-size: 2rem;
+    }
+
+    .navigation ul li a .icon {
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 75px;
+        text-align: center;
+    }
+
+    .toggle {
+        z-index: 10001;
+        transition: 0.5s;
+    }
+
+    .main.active {
+        left: 400px;
+    }
+
+    .main.active .toggle {
+        color: #fff;
+        position: fixed;
+        left: 360px;
+    }
+
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        width: 53%;
+        left: 0;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+    
+    .image-container {
+        text-align: center;
+        width: 422px;
+        height: 115px;
+        /* border: white dotted; */
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardHeader h2 {
+        font-size: 20px;
+    }
+
+    .user {
+        min-width: 40px;
+    }
+
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        width: 70%;
+        left: 0;
+    }
+
+    .toggle {
+        z-index: 10001;
+        width: 26px;
+        height: 26px;
+        top: 10px;
+        left: 4px;
+        font-size: 1.5rem;
+        transition: 0.5s;
+    }
+
+    .main.active {
+        left: 274px;
+    }
+
+    .main.active .toggle {
+        color: #fff;
+        position: fixed;
+        left: 240px;
+    }
+
+    .navigation ul li a {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .navigation ul li a .icon .react-icon {
+        font-size: 1.6rem;
+    }
+
+    .navigation ul li a .icon {
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 75px;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+
+    .icon-container {
+        width: 100px;
+        height: 50px;
+        /* border: white dotted; */
+    }
+    
+    .icons-container {
+        transform: scale(0.6);
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        height: 10%;
+        /* border: white dotted; */
+        gap: 20px;
+    }
+    
+    .icons-container-2 {
+        transform: scale(0.7);
+        width: 100%;
+        height: 90%;
+        /* border: white dotted; */
+    }
+
+    .title-page {
+        font-size: 8px;
+    }
+
+    .h-flex {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardHeader h2 {
+        font-size: 20px;
+    }
+
+    .user {
+        min-width: 40px;
+    }
+
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        width: 82%;
+        left: 0;
+    }
+
+    .toggle {
+        z-index: 10001;
+        width: 26px;
+        height: 26px;
+        top: 10px;
+        left: 4px;
+        font-size: 1.5rem;
+        transition: 0.5s;
+    }
+
+    .main.active .toggle {
+        color: #fff;
+        position: fixed;
+        left: 260px;
+    }
+
+    .navigation ul li a {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .navigation ul li a .icon .react-icon {
+        font-size: 1.6rem;
+    }
+
+    .navigation ul li a .icon {
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 75px;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+    }
+    
+    .image-container {
+        text-align: center;
+        width: 275px;
+        height: 110px;
+        /* border: white dotted; */
+    }
+
+    .title-page {
+        font-size: 8px;
+    }
+
+    .h-flex {
+        font-size: 15px;
+    }
+}

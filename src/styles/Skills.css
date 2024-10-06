@@ -1,0 +1,19 @@
+.menu-skills {
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    /* border: white dotted; */
+    margin-top: 150px;
+    padding-right: 130px;
+    left: -86px;
+    display: flex;
+}
+
+.html-tag {
+    font-family: monospace;
+    color: white;
+}
+
+.html-tag p {
+    margin: 0;
+}
